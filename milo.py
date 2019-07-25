@@ -91,21 +91,21 @@ async def botsupportserver(ctx):
 	await ctx.send(content="https://discord.gg/FeD6RUs", embed=embed)
 	
 @client.command()
+async def useravatar(ctx, member : discord.Member):
+	show_avatar = discord.Embed(
+	
+	         color = discord.Color.dark_blue()
+	)
+	show_avatar.set_image(url="{}".format(member.avatar_url))
+	await ctx.send(embed=show_avatar)
+	
+@client.command()
 async def avatar(ctx):
 	show_avatar = discord.Embed(
 	
 	         color = discord.Color.dark_blue()
 	)
 	show_avatar.set_image(url="{}".format(ctx.author.avatar_url))
-	await ctx.send(embed=show_avatar)
-	
-@client.command()
-async def avatar(ctx, member : discord.Member):
-	show_avatar = discord.Embed(
-	
-	         color = discord.Color.dark_blue()
-	)
-	show_avatar.set_image(url="{}".format(member.avatar_url))
 	await ctx.send(embed=show_avatar)
 	
 client.run(os.getenv("TOKEN"))
