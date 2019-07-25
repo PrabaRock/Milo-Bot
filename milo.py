@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 
 import datetime
+import os
 
 client = commands.Bot(command_prefix="-")
 client.remove_command('help')
@@ -107,4 +108,4 @@ async def avatar(ctx, member : discord.Member):
 	show_avatar.set_image(url="{}".format(member.avatar_url))
 	await ctx.send(embed=show_avatar)
 	
-client.run("NjAzNTkwOTgyNzgwNDUyODk0.XTh7PQ.J7wC3N9aeznuG8fChtEo6glqtXI")
+client.run(os.getenv("TOKEN"))
