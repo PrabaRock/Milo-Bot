@@ -14,7 +14,7 @@ async def on_ready():
 	print('Creator - PrabaRock7#3945')
 	print('Release Version - v01')
 	print('ᎷᎨᏝᎾ')
-	await client.change_presence(status=discord.Status.online, activity=discord.Game(name="-help | Under Maintenance"))
+	await client.change_presence(status=discord.Status.online, activity=discord.Game(name="-help | MiloBot™"))
 
 	
 @client.event
